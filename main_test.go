@@ -7,6 +7,8 @@ import (
 	"adventofcode-2020/day4"
 	"adventofcode-2020/day5"
 	"fmt"
+	"reflect"
+	"runtime"
 	"testing"
 )
 
@@ -31,20 +33,22 @@ func Test(t *testing.T) {
 		{
 			{day5.Part1, "987"},
 			{day5.Part2, "603"},
+			{day5.Part2NotOptimal, "603"},
 		},
 	})
 }
 
-type tDay = [2]tPart
+type tDay = []tPart
 type tPart struct {
 	Fn       func() string
 	Expected string
 }
 
 func assertDays(t *testing.T, days []tDay) {
-	for i, day := range days {
-		assert(t, fmt.Sprintf("Day %d, part %d", i+1, 1), day[0].Fn(), day[0].Expected)
-		assert(t, fmt.Sprintf("Day %d, part %d", i+1, 2), day[1].Fn(), day[1].Expected)
+	for _, day := range days {
+		for _, part := range day {
+			assert(t, fmt.Sprint(getFuncName(part.Fn)), part.Fn(), part.Expected)
+		}
 	}
 }
 
@@ -52,4 +56,8 @@ func assert(t *testing.T, message string, actual string, expected string) {
 	if actual != expected {
 		t.Fatalf("%s – Actual: %s, expected: %s", message, actual, expected)
 	}
+}
+
+func getFuncName(fn interface{}) string {
+	return runtime.FuncForPC(reflect.ValueOf(fn).Pointer()).Name()
 }
