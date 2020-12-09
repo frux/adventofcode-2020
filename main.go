@@ -9,6 +9,7 @@ import (
 	"adventofcode-2020/day6"
 	"adventofcode-2020/day7"
 	"adventofcode-2020/day8"
+	"adventofcode-2020/day9"
 	"flag"
 	"fmt"
 	"os"
@@ -46,6 +47,8 @@ func getAnswers(dayNumber int) (string, string, error) {
 		return day7.Part1(), day7.Part2(), nil
 	case 8:
 		return day8.Part1(), day8.Part2(), nil
+	case 9:
+		return day9.Part1(), day9.Part2(), nil
 	}
 
 	return "", "", fmt.Errorf("Can't find day with number %d", dayNumber)

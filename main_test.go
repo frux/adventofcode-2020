@@ -9,6 +9,7 @@ import (
 	"adventofcode-2020/day6"
 	"adventofcode-2020/day7"
 	"adventofcode-2020/day8"
+	"adventofcode-2020/day9"
 	"fmt"
 	"reflect"
 	"runtime"
@@ -49,6 +50,10 @@ func Test(t *testing.T) {
 		{
 			{day8.Part1, "1723"},
 			{day8.Part2, "846"},
+		},
+		{
+			{day9.Part1, "1309761972"},
+			{day9.Part2, "177989832"},
 		},
 	})
 }
