@@ -3,5 +3,5 @@
 
 ## Run a day
 ```bash
-go run ./ -day <day number>
+go run ./ -day <day number (1-31)> -part <part number (1 or 2)>
 ```
