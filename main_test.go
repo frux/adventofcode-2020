@@ -2,6 +2,7 @@ package main_test
 
 import (
 	"adventofcode-2020/day1"
+	"adventofcode-2020/day10"
 	"adventofcode-2020/day2"
 	"adventofcode-2020/day3"
 	"adventofcode-2020/day4"
@@ -54,6 +55,10 @@ func Test(t *testing.T) {
 		{
 			{day9.Part1, "1309761972"},
 			{day9.Part2, "177989832"},
+		},
+		{
+			{day10.Part1, "2368"},
+			{day10.Part2, "1727094849536"},
 		},
 	})
 }
