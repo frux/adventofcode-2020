@@ -4,6 +4,7 @@ import (
 	"adventofcode-2020/day1"
 	"adventofcode-2020/day10"
 	"adventofcode-2020/day11"
+	"adventofcode-2020/day12"
 	"adventofcode-2020/day2"
 	"adventofcode-2020/day3"
 	"adventofcode-2020/day4"
@@ -64,6 +65,10 @@ func Test(t *testing.T) {
 		{
 			{day11.Part1, "2247"},
 			{day11.Part2, "2011"},
+		},
+		{
+			{day12.Part1, "1601"},
+			{day12.Part2, "13340"},
 		},
 	})
 }
