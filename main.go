@@ -7,6 +7,7 @@ import (
 	"adventofcode-2020/day12"
 	"adventofcode-2020/day13"
 	"adventofcode-2020/day14"
+	"adventofcode-2020/day15"
 	"adventofcode-2020/day2"
 	"adventofcode-2020/day3"
 	"adventofcode-2020/day4"
@@ -94,6 +95,8 @@ func getDay(dayNumber int) (func() string, func() string, error) {
 		return day13.Part1, day13.Part2, nil
 	case 14:
 		return day14.Part1, day14.Part2, nil
+	case 15:
+		return day15.Part1, day15.Part2, nil
 	}
 
 	return nil, nil, fmt.Errorf("%d is not a valid day number. It's either not a December date (1-31) or I have no solution for that day yet.", dayNumber)
